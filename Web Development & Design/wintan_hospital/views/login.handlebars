@@ -1,0 +1,27 @@
+<div id="Login-Form">
+    <form id="Login" action="/auth" method="POST">
+
+        <div class="Form-Wrapper">
+            <h3>Please fill in your account credentials</h3>
+            <p id="Error-Message">{{loginError}}</p>
+            <label for="id">ID:</label>
+            <input name="id" type="text" autofocus>
+            <label for="password">Password:</label>
+            <input autocomplete="new-password" name="password" type="password">
+            <button type="submit">Login</button>
+        </div>
+    </form>
+</div>
+<script>
+    const loginForm = document.getElementById("Login");
+    loginForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const errorMessage = document.getElementById("Error-Message");
+        const {id, password} = e.target.elements;
+        if(id.value === "" || password.value === "") {
+            errorMessage.textContent = "All fields must be filled!\n"
+        } else {
+            loginForm.submit();
+        }
+    })
+</script>

@@ -1,0 +1,17 @@
+<div id="Appointments">
+    <div>
+        <h1>These are the appointments you've made, please check in regularly as we do not refund missed appointments.</h1>
+    </div>
+    {{#each appointments}}
+    <div class="Card">
+        <ul>
+            <li><span class="Card-Label">Appointment ID:</span> {{id}}</li>
+            <li><span class="Card-Label">Doctor:</span> {{name}}</li>
+            <li><span class="Card-Label">Field:</span> {{field}}</li>
+            <li><span class="Card-Label">Date:</span> {{date}}</li>
+        </ul>
+    </div>
+     {{else}}
+    <h1>You have not appointed a doctor yet!</h1>
+    {{/each}}
+</div>

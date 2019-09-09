@@ -1,0 +1,197 @@
+::root {
+ --Form-Wrapper-Text-Color: rgb(192, 163, 0);
+}
+
+.Hero {
+  min-height: 100vh;
+  color: white;
+  background-image: url("../img/bg.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Greeting-Container {
+  text-align: center;
+}
+
+.Greeting-Container h1 {
+  font-size: calc(18px + 6vh);
+  border-bottom: 2px solid white;
+}
+
+.Greeting-Container p {
+  font-size: calc(16px + 3vh);
+}
+#Register-Form,
+#Login-Form,
+#Profile,
+#Register-Appoint-Form,
+#Appointments:not(:first-child),
+#Doctors {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #f2709c; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #ff9472,
+    #f2709c
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #ff9472,
+    #f2709c
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  min-height: 100vh;
+}
+
+.Form-Wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+  width: 40vw;
+  height: 40vh;
+  min-width: 200px;
+  min-height: 600px;
+  border-radius: 20px;
+  box-shadow: 8px 8px rgba(88, 88, 88, 0.548);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.Form-Wrapper input[type="text"],
+.Form-Wrapper input[type="password"] {
+  width: 70%;
+  margin: 5px;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid crimson;
+  color: white;
+  font-family: "Consolas", monospace;
+}
+.Form-Wrapper input[type="date"] {
+  width: 70%;
+  background-color: transparent;
+  color: white;
+  border: none;
+  border-bottom: 1px solid crimson;
+}
+::-webkit-datetime-edit {
+  text-align: center;
+ padding-left: 30px;
+ font-family: "Consolas", monospace;
+}
+::-webkit-inner-spin-button {
+  display: none;
+}
+::-webkit-calendar-picker-indicator {
+  background-color: black;
+  color: crimson;
+  cursor: pointer;
+}
+.Form-Wrapper select {
+  width: 70%;
+  font-family: "Consolas", monospace;
+  text-align-last: center;
+  background-color: transparent;
+  color: white;
+  border: none;
+  border-bottom: 1px solid crimson;
+}
+.Form-Wrapper option {
+  background-color: black;
+  color: white;
+  text-align: center;
+  outline: none;
+}
+.Form-Wrapper h3 {
+  margin-bottom: 4vh;
+  text-align: center;
+}
+
+.Form-Wrapper button {
+  background-color: crimson;
+  color: black;
+  border: none;
+  margin-top: 5px;
+  width: 70px;
+  height: 30px;
+  border-radius: 5px;
+}
+
+.Form-Wrapper button:hover {
+  background-color: red;
+  font-weight: bold;
+}
+#Profile h1 {
+  border-bottom: 2px solid black;
+}
+#Reg-App-Form {
+  min-height: 300px;
+}
+#Appointments:not(:first-child){
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  justify-content: space-around !important;
+}
+#Doctors:not(:first-child) {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+#Appointments h1 {
+  text-align: center;
+}
+#Doctors .Container h1{
+  text-align: center;
+}
+.Card {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+  width: 30vw;
+  height: 40vh;
+  min-width: 200px;
+  min-height: 300px;
+  border-radius: 20px;
+  box-shadow: 8px 8px rgba(88, 88, 88, 0.548);
+  margin-bottom: 10px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.Card ul {
+  font-family: "Consolas", monospace;
+  list-style-type: none;
+  font-weight: bolder;
+}
+.Card-Label {
+  color: crimson;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10%);
+    box-shadow: none;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

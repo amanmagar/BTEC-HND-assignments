@@ -1,0 +1,31 @@
+<div id="Register-Appoint-Form">
+    <form id="Register-Appoint" action="/add_appointment" method="POST">
+
+        <div id="Reg-App-Form" class="Form-Wrapper">
+            <h3>Please select your doctor and date!</h3>
+            <p id="Error-Message"></p>
+            <label for="doctor">Doctor:</label>
+            <select name="doctor">
+                {{#each names}}
+                <option value="{{this}}">{{this}}</option>
+                {{/each}}
+            </select>
+            <label for="date">Date:</label>
+            <input name="date" type="date">
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</div>
+<script>
+    const appointForm = document.getElementById("Register-Appoint");
+    appointForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const errorMessage = document.getElementById("Error-Message");
+        const {date} = e.target.elements;
+        if(date.value === "") {
+            errorMessage.textContent = "All fields must be filled!\n"
+        } else {
+            appointForm.submit();
+        }
+    })
+</script>

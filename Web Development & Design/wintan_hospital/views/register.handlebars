@@ -1,0 +1,48 @@
+<div id="Register-Form">
+    <form id="Register" action="/add_patient" method="POST">
+        <div class="Form-Wrapper">
+            <h3>Please enter your personal information</h3>
+            <p id="Error-Message"></p>
+
+            <label for="nic">NIC No:</label>
+            <input name="nic" type="text" autofocus>
+
+            <label for="name">Name:</label>
+            <input name="name" type="text">
+
+            <label for="gender">Gender:</label>
+            <select name="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+
+            <label for="dob">Date of Birth:</label>
+            <input name="dob" type="date">
+
+            <label for="password">Password:</label>
+            <input autocomplete="new-password" name="password" type="password">
+
+            <label for="confirm">Re-type Password:</label>
+            <input name="confirm" type="password">
+
+            <button id="Register-Button" type="submit">Register</button>
+        </div>
+    </form>
+</div>
+<script>
+    const registerForm = document.getElementById("Register");
+    registerForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const errorMessage = document.getElementById("Error-Message");
+        const { nic, name, gender, dob,  password, confirm } = e.target.elements;
+        if(nic.value === "" || password.value === "" || confirm.value === "" || name.value === "" || dob.value === "") {
+            errorMessage.textContent = "All fields must be filled!\n";
+        } else if (nic.value.length != 10) {
+            errorMessage.textContent = "NIC No. must be 10 characters!\n"
+        } else if (password.value !== confirm.value) {
+            errorMessage.textContent = "Passwords do not match!\n"
+        } else {
+            registerForm.submit();
+        }
+    })
+</script>

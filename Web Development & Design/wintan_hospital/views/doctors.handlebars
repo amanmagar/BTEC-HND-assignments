@@ -1,0 +1,16 @@
+<div id="Doctors">
+    <div class="Container">
+        <h1 style="margin: 0; padding: 0;">Our doctors are the best and the brightest of Wintan Hospital</h1>
+    </div>
+    {{#each doctors}}
+    <div class="Card">
+        <ul>
+            <li><span class="Card-Label">ID:</span> {{doctor_id}}</li>
+            <li><span class="Card-Label">Name:</span> {{name}}</li>
+            <li><span class="Card-Label">Field:</span> {{field}}</li>
+            <li><span class="Card-Label">Status:</span> {{status}}</li>
+            <li><span class="Card-Label">Rank:</span> {{rate}}/5</li>
+        </ul>
+    </div>
+    {{/each}}
+</div>
