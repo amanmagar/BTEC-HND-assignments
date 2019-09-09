@@ -1,0 +1,1 @@
+HMS.bak is a backup file of the database I have used for the Hospital Management System, please use restore facilities of SQL Server to restore the database in your system. Do note that it overwrites all the existing data of the database HMS.bak will be restored to.
